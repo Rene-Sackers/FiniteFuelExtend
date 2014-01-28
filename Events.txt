@@ -1,0 +1,21 @@
+Gas types
+FiniteFuelGasTypes = {
+	Car = 1,
+	Watercraft = 2,
+	Aircraft = 3
+}
+
+Gas stations
+GasStation = {
+	position (Vector3),
+	gasType (FiniteFuelGasTypes)
+}
+
+Sends:
+FiniteFuelEnteredGasStation({vehicle (vehicle), vehicleGasType (FFiniteFuelGasTypes), fuel (int), tankSize (int), gasStation (GasStation)})
+FiniteFuelExitedGasStation({vehicle (vehicle), gasStation (GasStation)})
+FiniteFuelReturnGetFuel({vehicle (vehicle), vehicleGasType (FiniteFuelGasTypes), fuel (int), tankSize (int)})
+
+Receives:
+FiniteFuelGetFuel()
+FiniteFuelSetFuel(fuel (int))
